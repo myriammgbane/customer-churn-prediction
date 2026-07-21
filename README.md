@@ -57,22 +57,23 @@ A distance-based classification algorithm used to compare customer similarities 
 
 ## Model Evaluation
 
-The models were evaluated using:
+The models were evaluated using multiple classification metrics:
 
 - Accuracy
+- Precision
+- Recall
+- F1-score
 - Confusion Matrix
 
-The evaluation focused not only on overall prediction performance but also on the ability of each model to correctly identify customers who were likely to churn.
+These metrics were used to assess overall model performance while considering the importance of correctly identifying customers who were likely to churn. F1-score was particularly useful as it balances precision and recall, providing a more reliable measure for an imbalanced classification problem.
 
 ## Results & Findings
 
-The results showed that all three models achieved moderate predictive performance.
+The three models achieved moderate predictive performance, with differences across evaluation metrics.
 
-Although KNN achieved slightly higher overall accuracy, further evaluation showed that it had weaker performance in identifying customers who actually churned.
+While KNN achieved strong overall accuracy, Logistic Regression provided a more balanced performance across precision, recall and F1-score, making it more suitable for identifying customers at risk of churn.
 
-Logistic Regression provided a more balanced performance and was more effective at detecting churn cases, making it potentially more useful from a business perspective where identifying at-risk customers is a priority.
-
-The Decision Tree model demonstrated weaker performance, potentially due to limitations in capturing more complex relationships within the dataset.
+The results demonstrate that the best-performing model should not be selected based on accuracy alone. For customer churn prediction, correctly identifying potential churners is a key business objective, making recall and F1-score important considerations.
 
 ## Business Insights
 
