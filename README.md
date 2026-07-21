@@ -2,62 +2,68 @@
 
 ## Project Overview
 
-Customer retention is a key challenge for businesses, as losing customers can directly impact revenue and long-term growth. This project applies machine learning techniques to predict customer churn and identify customers who may be at risk of leaving.
+Customer churn is a key challenge for businesses, as losing customers can negatively impact revenue and long-term customer relationships. This project applies machine learning techniques to predict customer churn using the Acme Telephonica dataset.
 
-Using the Acme Telephonica customer dataset, this project explores how predictive modelling can support data-driven decision-making and help organisations develop targeted customer retention strategies.
+The aim of this project was to develop classification models that could identify patterns associated with customer churn and evaluate how predictive analytics can support targeted customer retention strategies.
 
 ## Objectives
 
-The main objectives of this project were to:
+The objectives of this project were to:
 
-- Analyse customer data to identify patterns associated with churn.
-- Clean and prepare data for machine learning modelling.
-- Develop classification models to predict customer churn.
-- Compare model performance and evaluate their suitability from a business perspective.
+- Explore customer data to identify factors associated with churn.
+- Clean and preprocess data for machine learning analysis.
+- Develop and compare multiple classification models.
+- Evaluate model performance and consider the business implications of predictive insights.
+
+## Dataset
+
+The project used the Acme Telephonica customer dataset, containing customer information and attributes related to service usage and account behaviour.
+
+The dataset was analysed to understand patterns between customer characteristics and churn outcomes.
 
 ## Tools & Technologies
 
-- **Programming Language:** Python
-- **Environment:** Google Colab
-- **Data Analysis:** Pandas, NumPy
-- **Data Visualisation:** Matplotlib
-- **Machine Learning:** Scikit-learn
+- Python
+- Google Colab
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
 
 ## Data Preparation
 
-The dataset was prepared for machine learning through:
+The dataset was prepared for machine learning by:
 
-- Data cleaning and preprocessing.
+- Cleaning and preprocessing customer data.
 - Preparing features and target variables.
-- Splitting the dataset into training and testing sets.
-- Transforming data into a format suitable for classification models.
+- Splitting data into training and testing datasets.
+- Transforming data into a suitable format for classification models.
 
 ## Exploratory Data Analysis
 
-Exploratory analysis was conducted to understand customer characteristics and identify patterns linked to churn.
+Exploratory data analysis was conducted to investigate customer characteristics and identify patterns related to churn.
 
-Analysis included:
-
-- Examining customer attributes and their relationship with churn.
-- Visualising trends within the dataset.
-- Identifying potential factors influencing customer retention.
+Visualisations were used to understand relationships within the dataset and support interpretation of model results.
 
 ## Machine Learning Models
 
 Three classification models were developed and compared:
 
 ### Logistic Regression
-A statistical classification model used as a baseline approach for predicting customer churn.
+
+A statistical classification approach used to predict the likelihood of customer churn based on customer features.
 
 ### Decision Tree
-A tree-based model used to identify patterns and decision rules within customer data.
+
+A tree-based classification model used to identify decision patterns within customer data.
 
 ### K-Nearest Neighbours (KNN)
-A distance-based classification algorithm used to compare customer similarities and predict churn outcomes.
+
+A distance-based classification algorithm used to classify customers based on similarities within the dataset.
 
 ## Model Evaluation
 
-The models were evaluated using multiple classification metrics:
+The models were evaluated using:
 
 - Accuracy
 - Precision
@@ -65,15 +71,21 @@ The models were evaluated using multiple classification metrics:
 - F1-score
 - Confusion Matrix
 
-These metrics were used to assess overall model performance while considering the importance of correctly identifying customers who were likely to churn. F1-score was particularly useful as it balances precision and recall, providing a more reliable measure for an imbalanced classification problem.
+These evaluation methods were used to assess both overall model performance and how effectively each model identified customers at risk of churn.
 
 ## Results & Findings
 
-The three models achieved moderate predictive performance, with differences across evaluation metrics.
+The models achieved similar levels of predictive performance, with K-Nearest Neighbours achieving the highest overall accuracy.
 
-While KNN achieved strong overall accuracy, Logistic Regression provided a more balanced performance across precision, recall and F1-score, making it more suitable for identifying customers at risk of churn.
+| Model | Accuracy |
+| --- | --- |
+| Logistic Regression | 54.55% |
+| Decision Tree | 52.35% |
+| K-Nearest Neighbours (KNN) | 56.11% |
 
-The results demonstrate that the best-performing model should not be selected based on accuracy alone. For customer churn prediction, correctly identifying potential churners is a key business objective, making recall and F1-score important considerations.
+Although KNN achieved the highest accuracy, further evaluation showed that performance varied across different classification metrics. This highlights the importance of considering measures beyond accuracy when applying machine learning to customer churn problems.
+
+The results demonstrated that customer churn prediction is a challenging task, and model effectiveness depends heavily on the quality and relevance of available customer data.
 
 ## Business Insights
 
@@ -81,14 +93,12 @@ The project highlights how machine learning can support customer retention strat
 
 Potential business applications include:
 
-- Targeting customers with personalised retention offers.
+- Developing targeted retention campaigns.
 - Improving customer engagement strategies.
-- Using predictive insights to support proactive decision-making.
+- Supporting data-driven decision-making.
 
 ## Conclusion
 
-This project demonstrates how machine learning can be applied to solve a real-world business problem through predictive analytics.
+This project demonstrated how machine learning can be applied to a real-world business problem through predictive analytics.
 
-The findings highlight the importance of selecting appropriate evaluation methods, as accuracy alone may not always reflect the usefulness of a model in a business context. Identifying customers likely to churn requires models that balance overall performance with the ability to detect churn cases effectively.
-
-Future improvements could include incorporating additional customer data, applying feature engineering techniques, and testing more advanced machine learning approaches to improve predictive performance.
+The findings highlight the importance of selecting appropriate evaluation methods and understanding the limitations of predictive models. While machine learning can provide valuable insights into customer behaviour, improving prediction performance may require additional customer information, feature engineering, or more advanced modelling techniques.
